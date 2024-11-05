@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>xenivora</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <nav>
+    <ul class="sidebar">
+      <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <ul>
+      <li><a href="#">xenivora</a></li>
+      <li class="hideOnMobile"><a href="index.html">Home</a></li>
+      <li class="hideOnMobile"><a href="about.html">About</a></li>
+      <li class="hideOnMobile"><a href="gallery.html">Gallery</a></li>
+      <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+      <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+    </ul>
+  </nav>
+
+  <!--konten Gallery-->
+  <div class="container-gallery">
+    <div class="image">
+      <img src="sertifikat1.jpg" alt="Sertifikat 1" onclick="openPopup('sertifikat1.jpg')">
+    </div>
+    <div class="image">
+      <img src="sertifikat2.jpg" alt="Sertifikat 2" onclick="openPopup('sertifikat2.jpg')">
+    </div>
+  </div>
+  <div class="popup-video">
+    <span onclick="closePopup()">&times;</span>
+    <img class="popup-content" style="display: none;">
+  </div>
+
+  <script>
+     function openPopup(src) {
+      const popup = document.querySelector('.popup-video');
+      const img = popup.querySelector('img');
+      
+      popup.style.display = 'flex';
+      img.style.display = 'block';
+      img.src = src;
+    }
+
+    function closePopup() {
+      const popup = document.querySelector('.popup-video');
+      popup.style.display = 'none';
+      const img = popup.querySelector('img');
+      img.src = '';
+    }
+
+    function showSidebar(){
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'flex'
+      sidebar.style.visibility = 'visible'
+    }
+    function hideSidebar(){
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'none'
+      sidebar.style.visibility = 'hidden'
+    }
+  </script>
+</body>
+</html>

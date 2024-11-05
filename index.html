@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>xenivora</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <ul class="sidebar">
+      <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <ul>
+      <li><a href="#">xenivora</a></li>
+      <li class="hideOnMobile"><a href="index.html">Home</a></li>
+      <li class="hideOnMobile"><a href="about.html">About</a></li>
+      <li class="hideOnMobile"><a href="gallery.html">Gallery</a></li>
+      <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+      <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+    </ul>
+  </nav>
+
+  <!--konten Dashboard-->
+  <div class="container">
+    <div class="content">
+        <p>
+          Halo, saya Ahmad Irwan bisa di panggil nama profesi saya sebagai Harlan, saya seorang Konten kreator yang berfokus pada videografi, manajemen keuangan, dan pengembangan web.
+          <br>
+          Pengalaman saya dalam pengelolaan keuangan dan programming, saya juga membangun bisnis digital yang memberikan solusi yang efektif dan estetis. Portofolio saya mencakup berbagai proyek kreatif yang dirancang untuk menarik perhatian audiens dan membangun identitas brand yang kuat di platform digital.
+          <br>
+          Jelajahi lebih lanjut karya-karya saya atau hubungi saya untuk berdiskusi mengenai bagaimana saya dapat membantu mengembangkan proyek Anda berikutnya.
+        </p>
+    </div>
+    <div class="imbx">
+        <img src="xenivora_profil.png">
+    </div>
+</div>
+
+  <script>
+    function showSidebar(){
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'flex'
+      sidebar.style.visibility = 'visible'
+    }
+    function hideSidebar(){
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'none'
+      sidebar.style.visibility = 'hidden'
+    }
+  </script>
+</body>
+</html>

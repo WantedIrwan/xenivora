@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>xenivora</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <ul class="sidebar">
+      <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <ul>
+      <li><a href="#">xenivora</a></li>
+      <li class="hideOnMobile"><a href="index.html">Home</a></li>
+      <li class="hideOnMobile"><a href="about.html">About</a></li>
+      <li class="hideOnMobile"><a href="gallery.html">Gallery</a></li>
+      <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+      <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+    </ul>
+  </nav>
+
+  <!-- konten About -->
+   <div class="about-container">
+    <div class="about-content">
+        <h2>About Me</h2>
+        <p>
+            Perjalanan saya di dunia kreatif dan digital dimulai dengan ketertarikan sederhana yang tumbuh menjadi keahlian yang saya geluti hingga sekarang. Awalnya, saya membuat konten di YouTube, mengisi kanal dengan video game, edukasi, dan AMV. Tidak berhenti di situ, rasa penasaran saya terhadap fotografi juga mulai muncul ketika iseng memotret untuk keperluan konten. Hobi ini berkembang menjadi salah satu passion saya hingga sekarang, di mana saya terus mengeksplorasi dunia visual, baik melalui videografi maupun fotografi.
+            <br><br>
+            Di bidang pengembangan web, pengalaman pertama saya datang melalui tugas membuat blog, yang menjadi fondasi untuk proyek-proyek yang lebih kompleks. Salah satu pencapaian terbesar saya adalah kolaborasi dalam pengembangan teknologi IoT, di mana saya turut serta membuat perangkat otomatis untuk pengharum ruangan dan pakan ikan. Selain itu, saya berkontribusi dalam mendesain situs web sekolah menggunakan Figma, serta terlibat dalam coding dan presentasi akhir proyek.
+            <br><br>
+            Pengalaman saya dalam manajemen keuangan juga tumbuh seiring waktu. Saya belajar mengelola dana dari jasa yang saya tawarkan, mulai dari menulis hingga memotret. Setiap proyek yang saya jalani tidak hanya menghasilkan kreativitas, tetapi juga mendatangkan pendapatan yang semakin mengasah kemampuan saya dalam mengatur keuangan.
+            
+        </p>
+      </div>
+   </div>
+
+  <script>
+    function showSidebar(){
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'flex'
+      sidebar.style.visibility = 'visible'
+    }
+    function hideSidebar(){
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'none'
+      sidebar.style.visibility = 'hidden'
+    }
+  </script>
+</body>
+</html>
